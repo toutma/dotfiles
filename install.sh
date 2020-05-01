@@ -21,14 +21,14 @@ brew cask install iterm2
 chsh -s /bin/zsh
 
 # Utils
-brew install terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl gpg
+brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl gpg
 brew cask install keybase iina spectacle telegram spotify transmission the-unarchiver appcleaner
 
 # Languages
 brew install go crystal node
 
 # Dev tools
-brew install mkcert wellington
+brew install git mkcert wellington
 brew cask install slack insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider
 npm install -g svgo
 npm install -g gatsby-cli
@@ -73,7 +73,7 @@ brew cleanup
 
 # Prompt and fonts
 npm install --global pure-prompt
-git clone https://github.com/powerline/fonts.git --depth=1
+clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd ..
