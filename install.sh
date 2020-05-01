@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-#Prepare ssh repo
+# ssh repo
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 
-#Install Homebrew
+# Homebrew
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -15,35 +15,35 @@ ln -s $(pwd)/env/.gitignore ~/.
 ln -s $(pwd)/env/.zshrc ~/.
 ln -s $(pwd)/env/.alias ~/.
 
-#Install ZSH
+# ZSH
 brew install zsh zsh-completions
 brew cask install iterm2
 chsh -s /bin/zsh
 
-#Install utils
-brew install terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip
-brew cask install iina spectacle telegram spotify transmission the-unarchiver appcleaner
+# Utils
+brew install terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl gpg
+brew cask install keybase iina spectacle telegram spotify transmission the-unarchiver appcleaner
 
-#Install languages
+# Languages
 brew install go crystal node
 
-#Install dev tools
+# Dev tools
 brew install mkcert wellington
-brew cask install slack insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox
+brew cask install slack insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider
 npm install -g svgo
 npm install -g gatsby-cli
 
-#Install Python tools
+# Python tools
 sudo easy_install pip
 
-#Install composer
+# Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
 
-#Install Docker and Dinghy
+# Docker and Dinghy
 brew tap codekitchen/dinghy
 brew install docker docker-machine docker-compose dinghy
 mkdir $HOME/.dinghy
@@ -62,16 +62,16 @@ mkdir $HOME/.dinghy
 EOM
 dinghy create
 
-#Remove apache
+# Remove apache
 sudo apachectl -k stop
 sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
 
-#Update PHP
+# Update PHP
 brew install php@7.3
 
 brew cleanup
 
-#Install prompt and fonts
+# Prompt and fonts
 npm install --global pure-prompt
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
@@ -79,10 +79,10 @@ cd fonts
 cd ..
 rm -rf fonts
 
-#Install Oh My ZSH
+# Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#Update osx conf
+# osx conf
 defaults write com.apple.Terminal FocusFollowsMouse -string YES
 
 # Set a blazingly fast keyboard repeat rate
