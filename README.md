@@ -1,4 +1,4 @@
-# My `dotfiles` 🧸
+# dotfiles
 ## Install
 For a new Mac setup, just type:
 ```bash
