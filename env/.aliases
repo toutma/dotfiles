@@ -19,7 +19,7 @@ alias tagdate="date '+%Y-%m-%d-%H%M%S'"
 alias edit='code'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew doctor; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -87,6 +87,7 @@ alias dockerstop='docker-machine stop'
 alias dockerenv='eval $(docker-machine env)'
 alias rmcontainers='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias rmimages='docker rmi -f $(docker images -a -q) --force'
+alias killall='docker kill $(docker ps -q)'
 alias dcip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -a -q)"
 alias portainer="docker volume create portainer_data && docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer && open 'http://192.168.64.3:9000'"
 
