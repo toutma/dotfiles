@@ -17,7 +17,6 @@ ln -s $(pwd)/env/.alias ~/.
 
 # ZSH
 brew install zsh zsh-completions
-brew cask install iterm2
 chsh -s /bin/zsh
 
 # Utils
