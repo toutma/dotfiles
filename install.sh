@@ -31,6 +31,7 @@ brew install git mkcert wellington
 brew cask install slack insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider
 npm install -g svgo
 npm install -g gatsby-cli
+npm install -g react-devtools
 
 # Python tools
 sudo easy_install pip
