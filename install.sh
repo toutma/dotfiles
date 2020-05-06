@@ -21,14 +21,14 @@ chsh -s /bin/zsh
 
 # Utils
 brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl gpg
-brew cask install keybase iina spectacle telegram spotify transmission the-unarchiver appcleaner
+brew cask install keybase iina spectacle telegram transmission the-unarchiver appcleaner bartender alfred3 cleanmymac3 dashlane
 
 # Languages
 brew install go crystal node
 
 # Dev tools
 brew install git mkcert wellington
-brew cask install slack insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider
+brew cask install slack iterm2 insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider charles nucleo sketch zeplin
 npm install -g svgo
 npm install -g gatsby-cli
 npm install -g react-devtools
@@ -38,6 +38,8 @@ sudo easy_install pip
 
 # Update PHP
 brew install php@7.3
+echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.3/sbin:$PATH"' >> ~/.zshrc
 
 # Composer
 brew install mcrypt
@@ -45,7 +47,7 @@ brew install composer
 
 # Docker and Dinghy
 brew tap codekitchen/dinghy
-brew install docker docker-machine docker-compose dinghy
+brew install docker docker-machine docker-compose docker-machine-driver-xhyve dinghy
 mkdir $HOME/.dinghy
 /bin/cat <<EOM >$HOME/.dinghy/preferences.yml
 ---
