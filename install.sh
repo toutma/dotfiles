@@ -8,7 +8,7 @@ chmod 700 ~/.ssh
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-brew tap caskroom/cask
+brew tap
 
 ln -s $(pwd)/env/.gitconfig ~/.
 ln -s $(pwd)/env/.gitignore ~/.
@@ -36,12 +36,12 @@ npm install -g gatsby-cli
 # Python tools
 sudo easy_install pip
 
+# Update PHP
+brew install php@7.3
+
 # Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
-chmod +x /usr/local/bin/composer
+brew install mcrypt
+brew install composer
 
 # Docker and Dinghy
 brew tap codekitchen/dinghy
@@ -65,9 +65,6 @@ dinghy create
 # Remove apache
 sudo apachectl -k stop
 sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
-
-# Update PHP
-brew install php@7.3
 
 brew cleanup
 
