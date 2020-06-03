@@ -24,7 +24,7 @@ brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glance
 brew cask install keybase iina spectacle telegram transmission the-unarchiver appcleaner bartender alfred3 cleanmymac3 dashlane
 
 # Languages
-brew install go crystal node
+brew install go crystal node ruby
 
 # Dev tools
 brew install git mkcert wellington
