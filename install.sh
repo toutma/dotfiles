@@ -26,6 +26,12 @@ brew cask install keybase iina spectacle telegram transmission the-unarchiver ap
 # Languages
 brew install go crystal node ruby
 
+# Ruby
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
 # Dev tools
 brew install git mkcert wellington
 brew cask install slack iterm2 insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider charles nucleo sketch zeplin
@@ -48,6 +54,9 @@ brew install composer
 # Docker and Dinghy
 brew tap codekitchen/dinghy
 brew install docker docker-machine docker-compose docker-machine-driver-xhyve dinghy
+sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
 mkdir $HOME/.dinghy
 /bin/cat <<EOM >$HOME/.dinghy/preferences.yml
 ---
