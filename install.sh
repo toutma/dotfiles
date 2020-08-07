@@ -66,9 +66,9 @@ mkdir $HOME/.dinghy
   :dns_disabled: false
   :fsevents_disabled: false
   :create:
-    memory: 4096
-    cpus: 2
-    disk: 30000
+    memory: 8000
+    cpus: 4
+    disk: 100000
     provider: xhyve
 EOM
 dinghy create
