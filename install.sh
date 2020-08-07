@@ -58,7 +58,6 @@ sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docke
 sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
 mkdir $HOME/.dinghy
-/bin/cat <<EOM >$HOME/.dinghy/preferences.yml
 ---
 :preferences:
   :unfs_disabled: false
@@ -70,6 +69,7 @@ mkdir $HOME/.dinghy
     cpus: 4
     disk: 100000
     provider: xhyve
+    boot2docker_url: https://github.com/boot2docker/boot2docker/releases/download/v18.09.1-rc1/boot2docker.iso
 EOM
 dinghy create
 
