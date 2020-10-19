@@ -20,8 +20,8 @@ brew install zsh zsh-completions
 chsh -s /bin/zsh
 
 # Utils
-brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl gpg
-brew cask install keybase iina spectacle telegram transmission the-unarchiver appcleaner bartender alfred3 cleanmymac3 dashlane
+brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl 1password
+brew cask install iina rectangle alfred3 cleanmymac3 
 
 # Languages
 brew install go crystal node ruby
@@ -38,6 +38,7 @@ brew cask install slack iterm2 insomnia virtualbox sequel-pro ngrok visual-studi
 npm install -g svgo
 npm install -g gatsby-cli
 npm install -g react-devtools
+npm install --global asciicast2gif
 
 # Python tools
 sudo easy_install pip
@@ -50,28 +51,6 @@ echo 'export PATH="/usr/local/opt/php@7.3/sbin:$PATH"' >> ~/.zshrc
 # Composer
 brew install mcrypt
 brew install composer
-
-# Docker and Dinghy
-brew tap codekitchen/dinghy
-brew install docker docker-machine docker-compose docker-machine-driver-xhyve dinghy
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-
-mkdir $HOME/.dinghy
----
-:preferences:
-  :unfs_disabled: false
-  :proxy_disabled: true
-  :dns_disabled: false
-  :fsevents_disabled: false
-  :create:
-    memory: 8000
-    cpus: 4
-    disk: 100000
-    provider: xhyve
-    boot2docker_url: https://github.com/boot2docker/boot2docker/releases/download/v18.09.1-rc1/boot2docker.iso
-EOM
-dinghy create
 
 # Remove apache
 sudo apachectl -k stop
