@@ -13,7 +13,7 @@ brew tap
 ln -s $(pwd)/env/.gitconfig ~/.
 ln -s $(pwd)/env/.gitignore ~/.
 ln -s $(pwd)/env/.zshrc ~/.
-ln -s $(pwd)/env/.alias ~/.
+ln -s $(pwd)/env/.aliases ~/.
 
 # ZSH
 brew install zsh zsh-completions
