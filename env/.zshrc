@@ -52,11 +52,8 @@ export UPDATE_ZSH_DAYS=7
 plugins=(git osx golang docker zsh-autosuggestions z colorize npm node yarn colored-man-pages history sudo)
 
 # User configuration
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/sphinx-doc/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR=/usr/bin/nano
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
