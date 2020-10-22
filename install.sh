@@ -34,7 +34,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 # Dev tools
 brew install git mkcert wellington
-brew cask install slack iterm2 insomnia virtualbox sequel-pro ngrok visual-studio-code firefox-developer-edition firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider charles nucleo sketch zeplin
+brew cask install slack iterm2 ngrok visual-studio-code firefox google-chrome microsoft-edge nucleo screaming-frog-seo-spider nucleo figma
 npm install -g svgo
 npm install -g gatsby-cli
 npm install -g react-devtools
