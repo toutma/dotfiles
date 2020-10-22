@@ -90,3 +90,6 @@ alias portainer="docker volume create portainer_data && docker run -d -p 9000:90
 
 # Gastby
 alias gby='gatsby'
+
+# Thefuck
+alias fu='thefuck'
