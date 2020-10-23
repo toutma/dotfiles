@@ -20,7 +20,7 @@ brew install zsh zsh-completions
 chsh -s /bin/zsh
 
 # Utils
-brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl 1password
+brew install bat terminal-notifier tmate htop thefuck the_silver_searcher glances unrar p7zip youtube-dl 1password glow
 brew cask install iina rectangle alfred3 cleanmymac3 
 
 # Languages
